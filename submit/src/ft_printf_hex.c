@@ -6,13 +6,13 @@
 /*   By: byan <byan@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/16 23:11:37 by byan              #+#    #+#             */
-/*   Updated: 2022/01/16 23:58:24 by byan             ###   ########seoul.kr  */
+/*   Updated: 2022/04/24 20:15:59 by byan             ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	hex_len(unsigned int num)
+static int	hex_len(unsigned int num)
 {
 	int	len;
 
@@ -25,7 +25,7 @@ int	hex_len(unsigned int num)
 	return (len);
 }
 
-void	put_hex(unsigned int num, const char format)
+static void	put_hex(unsigned int num, const char format)
 {
 	if (num >= 16)
 	{

@@ -6,13 +6,13 @@
 /*   By: byan <byan@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/16 23:11:36 by byan              #+#    #+#             */
-/*   Updated: 2022/01/17 23:14:53 by byan             ###   ########seoul.kr  */
+/*   Updated: 2022/04/24 19:55:13 by byan             ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ptr_len(uintptr_t ptr)
+static int	ptr_len(uintptr_t ptr)
 {
 	int	len;
 
@@ -25,7 +25,7 @@ int	ptr_len(uintptr_t ptr)
 	return (len);
 }
 
-void	put_ptr(uintptr_t ptr)
+static void	put_ptr(uintptr_t ptr)
 {
 	if (ptr >= 16)
 	{

@@ -6,13 +6,13 @@
 /*   By: byan <byan@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/16 21:48:59 by byan              #+#    #+#             */
-/*   Updated: 2022/01/17 22:50:54 by byan             ###   ########seoul.kr  */
+/*   Updated: 2022/04/24 20:26:19 by byan             ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	check_formats(va_list args, const char format)
+static int	check_formats(va_list args, const char format)
 {
 	int	len;
 

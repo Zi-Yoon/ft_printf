@@ -6,13 +6,13 @@
 /*   By: byan <byan@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/16 22:35:23 by byan              #+#    #+#             */
-/*   Updated: 2022/01/16 23:20:48 by byan             ###   ########seoul.kr  */
+/*   Updated: 2022/04/24 19:53:10 by byan             ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	uint_len(unsigned int num)
+static int	uint_len(unsigned int num)
 {
 	int	len;
 
@@ -37,7 +37,7 @@ int	print_dec(int n)
 	return (len);
 }
 
-char	*ft_uitoa(unsigned int n)
+static char	*ft_uitoa(unsigned int n)
 {
 	char	*num;
 	int		len;

@@ -1,49 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf_str.c                                    :+:      :+:    :+:   */
+/*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: byan <byan@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/16 22:35:27 by byan              #+#    #+#             */
-/*   Updated: 2022/04/24 20:07:52 by byan             ###   ########seoul.kr  */
+/*   Created: 2022/04/24 19:54:00 by byan              #+#    #+#             */
+/*   Updated: 2022/04/24 20:22:04 by byan             ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#ifndef FT_PRINTF_H
+# define FT_PRINTF_H
 
-int	print_char(int c)
-{
-	write(1, &c, 1);
-	return (1);
-}
+# include <stdarg.h>
+# include "../libft/libft.h"
 
-void	put_str(char *str)
-{
-	int	i;
+int		ft_printf(const char *format, ...);
+int		print_char(int c);
+int		print_str(char *str);
+int		print_dec(int n);
+int		print_unsigned(unsigned int n);
+int		print_hex(unsigned int num, const char format);
+int		print_ptr(unsigned long long ptr);
+void	put_str(char *str);
 
-	i = 0;
-	while (str[i])
-	{
-		write(1, &str[i], 1);
-		i++;
-	}
-}
-
-int	print_str(char *str)
-{
-	int	i;
-
-	i = 0;
-	if (str == NULL)
-	{
-		put_str("(null)");
-		return (6);
-	}
-	while (str[i])
-	{
-		print_char(str[i]);
-		i++;
-	}
-	return (i);
-}
+#endif
